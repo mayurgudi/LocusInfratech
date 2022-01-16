@@ -1,0 +1,22 @@
+<div class="w-100" style="background-color: #172128;">
+  <div class="mx-auto" style="width: 100%; max-width: 1280px;">
+    <div id="slideshow" class="carousel slide" style="height: calc(100vh - 70px)" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <ng-container *ngFor="let item of images; let i = index">
+          <button (click)="check(i)" [ngClass]="i==0 ? 'active' : '' " data-bs-target="#slideshow" [attr.data-bs-slide-to]="i" [attr.aria-label]="'Slide'+i"></button>
+        </ng-container>
+      </div>
+      <div class="carousel-inner h-100">
+        <ng-container *ngFor="let item of images; let i = index">
+          <div class="carousel-item h-100" [ngClass]="i==0 ? 'active' : '' ">
+            <img [src]="item" style="object-fit: fill;" class="d-block w-100 h-100" alt="...">
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <app-slideshow></app-slideshow>
+    <app-preview></app-preview>
+    <app-pointer></app-pointer>
+    <app-review></app-review>
+  </div>
+</div>

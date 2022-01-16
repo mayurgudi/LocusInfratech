@@ -1,0 +1,40 @@
+<div class="w-100" style="background-color: #0F2028; height: 70px;">
+  <div class="mx-auto d-flex flex-row justify-content-start h-100" style="max-width: 1280px; background-color: transparent;">
+    <img src="../../assets/logo.png" class="py-md-3 py-2 px-2">
+    <a class="nav-link disabled">|</a>
+    <a class="nav-link">How it works</a>
+    <a class="nav-link dropdown">Offerings
+      <div class="dropdown-content mt-3">
+        <div class="row mx-0 pt-3 px-1">
+          <div class="col-12 col-md-3 mb-3">
+            <div style="height: 100px; background-color: violet;"></div>
+            <p>ABC</p>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <div style="height: 100px; background-color: violet;"></div>
+            <p>ABC</p>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <div style="height: 100px; background-color: violet;"></div>
+            <p>ABC</p>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <div style="height: 100px; background-color: violet;"></div>
+            <p>ABC</p>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <div style="height: 100px; background-color: violet;"></div>
+            <p>ABC</p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a class="nav-link dropdown">Locality
+      <div class="dropdown-content mt-3" style="width: fit-content;">
+        <p class="mx-2 my-2" *ngFor="let item of cities">{{ item }}</p>
+      </div>
+    </a>
+    <a class="nav-link">Locus Homes</a>
+    <a class="nav-link">More</a>
+  </div>
+</div>
