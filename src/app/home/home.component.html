@@ -8,8 +8,9 @@
       </div>
       <div class="carousel-inner h-100">
         <ng-container *ngFor="let item of images; let i = index">
-          <div class="carousel-item h-100" [ngClass]="i==0 ? 'active' : '' ">
+          <div class="carousel-item h-100" style="position: relative;" [ngClass]="i==0 ? 'active' : '' ">
             <img [src]="item" style="object-fit: fill;" class="d-block w-100 h-100" alt="...">
+            <button class="consult-btn" routerLink="/consult" *ngIf="i==0">XYZ</button>
           </div>
         </ng-container>
       </div>

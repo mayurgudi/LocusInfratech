@@ -13,6 +13,7 @@ import { PreviewComponent } from './home-components/preview/preview.component';
 import { PointerComponent } from './home-components/pointer/pointer.component';
 import { ReviewComponent } from './home-components/review/review.component';
 import { AboutComponent } from './about/about.component';
+import { InteriorComponent } from './interior/interior.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AboutComponent } from './about/about.component';
     PreviewComponent,
     PointerComponent,
     ReviewComponent,
-    AboutComponent
+    AboutComponent,
+    InteriorComponent
   ],
   imports: [
     BrowserModule,

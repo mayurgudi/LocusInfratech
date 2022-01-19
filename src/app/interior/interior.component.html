@@ -1,0 +1,23 @@
+<div class="dark-blue-bg">
+  <div class="mx-auto" style="max-width: 1280px; overflow: auto;">
+    <button class="round-gradient-btn mx-3 mt-3" (click)="back()" ><</button>
+    <ng-container *ngIf="isInterior">
+      <app-gallery *ngIf="page == 0" [head]="'Kitchen'" [items]="kitchen"></app-gallery>
+      <app-gallery *ngIf="page == 0" [head]="'Bedroom'" [items]="bedroom"></app-gallery>
+      <app-gallery *ngIf="page == 1" [head]="'Living Room'" [items]="livingroom"></app-gallery>
+      <app-gallery *ngIf="page == 1" [head]="'Kids Room'" [items]="kidsroom"></app-gallery>
+      <app-gallery *ngIf="page == 2" [head]="'Washroom'" [items]="washroom"></app-gallery>
+      <app-gallery *ngIf="page == 2" [head]="'Epoxy Flooring'" [items]="epoxy"></app-gallery>
+      <app-gallery *ngIf="page == 3" [head]="'Wardrobe'" [items]="wardrobe"></app-gallery>
+    </ng-container>
+    <ng-container *ngIf="!isInterior">
+      <app-gallery [head]="'Our Homes'" [items]="homes"></app-gallery>
+    </ng-container>
+  </div>
+  <div class="d-flex flex-row justify-content-center" *ngIf="isInterior">
+    <button class="round-gradient-btn m-3" (click)="updatePage(0)">1</button>
+    <button class="round-gradient-btn m-3" (click)="updatePage(1)">2</button>
+    <button class="round-gradient-btn m-3" (click)="updatePage(2)">3</button>
+    <button class="round-gradient-btn m-3" (click)="updatePage(3)">4</button>
+  </div>
+</div>
