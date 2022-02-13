@@ -24,14 +24,14 @@ export class InteriorComponent implements OnInit {
 
   }
 
-  kitchen : String[] = ["k1","k2","k3"];
-  bedroom : String[] = ["k1","k2","k3"];
-  livingroom : String[] = ["k1","k2","k3"];
-  kidsroom : String[] = ["k1","k2","k3"];
-  washroom : String[] = ["k1","k2","k3"];
-  epoxy : String[] = ["k1","k2","k3"];
-  wardrobe : String[] = ["k1","k2","k3"];
-  homes : String[] = ["k1","k2","k3"];
+  kitchen : String[] = ["../../assets/kitchen/1.jpg","../../assets/kitchen/2.jpg","../../assets/kitchen/3.jpg","../../assets/kitchen/4.jpg","../../assets/kitchen/5.jpg","../../assets/kitchen/6.jpg","../../assets/kitchen/7.jpg","../../assets/kitchen/8.jpg","../../assets/kitchen/9.jpg","../../assets/kitchen/10.jpg","../../assets/kitchen/11.jpg","../../assets/kitchen/12.jpg"];
+  bedroom : String[] = ["../../assets/bedroom/1.jpg","../../assets/bedroom/2.jpg","../../assets/bedroom/3.jpg","../../assets/bedroom/4.jpg","../../assets/bedroom/5.jpg","../../assets/bedroom/6.jpg","../../assets/bedroom/7.jpg","../../assets/bedroom/8.jpg","../../assets/bedroom/9.jpg","../../assets/bedroom/10.jpg","../../assets/bedroom/11.jpg","../../assets/bedroom/12.jpg"];
+  livingroom : String[] = ["../../assets/living room/1.jpg","../../assets/living room/2.jpg","../../assets/living room/3.jpg","../../assets/living room/4.jpg","../../assets/living room/5.jpg","../../assets/living room/6.jpg","../../assets/living room/7.jpg"];
+  kidsroom : String[] = ["../../assets/kids room/1.jpg","../../assets/kids room/2.jpg","../../assets/kids room/3.jpg","../../assets/kids room/4.jpg","../../assets/kids room/5.jpg","../../assets/kids room/6.jpg","../../assets/kids room/7.jpg","../../assets/kids room/8.jpg","../../assets/kids room/9.jpg","../../assets/kids room/10.jpg","../../assets/kids room/11.jpg","../../assets/kids room/12.jpg"];
+  washroom : String[] = ["../../assets/washroom/1.jpg","../../assets/washroom/2.jpg","../../assets/washroom/3.jpg","../../assets/washroom/4.jpg"];
+  epoxy : String[] = ["../../assets/epoxy flooring/1.jpg","../../assets/epoxy flooring/2.png","../../assets/epoxy flooring/3.jpg","../../assets/epoxy flooring/4.png","../../assets/epoxy flooring/5.png","../../assets/epoxy flooring/6.png","../../assets/epoxy flooring/7.png","../../assets/epoxy flooring/9.jpg","../../assets/epoxy flooring/10.jpg","../../assets/epoxy flooring/11.jpg","../../assets/epoxy flooring/12.jpg"];
+  wardrobe : String[] = ["../../assets/wardrobe/1.jpg","../../assets/wardrobe/2.jpg","../../assets/wardrobe/3.jpg","../../assets/wardrobe/4.jpg","../../assets/wardrobe/5.jpg","../../assets/wardrobe/6.jpg","../../assets/wardrobe/7.jpg","../../assets/wardrobe/8.jpg","../../assets/wardrobe/9.jpg","../../assets/wardrobe/10.jpg","../../assets/wardrobe/11.jpg","../../assets/wardrobe/12.jpg"];
+  homes : String[] = ["../../assets/homes/1.jpeg","../../assets/homes/2.jpeg","../../assets/homes/3.jpeg","../../assets/homes/4.jpeg","../../assets/homes/5.jpeg","../../assets/homes/6.jpeg","../../assets/homes/7.jpeg","../../assets/homes/8.jpeg","../../assets/homes/9.jpeg","../../assets/homes/10.jpeg","../../assets/homes/11.jpeg","../../assets/homes/12.jpeg","../../assets/homes/13.jpeg","../../assets/homes/14.jpeg","../../assets/homes/15.jpeg","../../assets/homes/16.jpeg","../../assets/homes/17.jpeg","../../assets/homes/18.jpeg","../../assets/homes/19.jpeg","../../assets/homes/20.jpeg","../../assets/homes/21.jpeg"];
   page : number;
   isInterior : boolean;
 

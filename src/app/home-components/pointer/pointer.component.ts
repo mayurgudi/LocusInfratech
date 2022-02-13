@@ -20,7 +20,11 @@ export class PointerComponent implements OnInit {
   arr : string[] = ["Meet designer", "Seal the deal", "Place the order", "Installation begins", "Move in"];
   percent : number[] = [0, 25, 50, 75, 100];
 
-  images = [`https://picsum.photos/id/700/900/500`, `https://picsum.photos/id/800/900/500`, `https://picsum.photos/id/807/900/500`, `https://picsum.photos/id/800/900/500`, `https://picsum.photos/id/807/900/500`];
+  images = ["../../../assets/its easier than you think/installation1 final.png",
+            "../../../assets/its easier than you think/meet the designer.png",
+            "../../../assets/its easier than you think/move in-01.png",
+            "../../../assets/its easier than you think/place the order.png",
+            "../../../assets/its easier than you think/wb seal the deal2 final.png"];
 
   fillArray(i : number) {
     for(var j=0; j<=i; j++){

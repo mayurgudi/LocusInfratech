@@ -13,6 +13,6 @@ export class NavbarComponent implements OnInit {
   }
 
   cities : String[] = [
-    "Abc","Abc","Abc","Abc","Abc","Abc","Abc","Abc","Abc","Abc"
+    "Badlapur", "Ambernath", "Ulhasnagar", "Vithalwadi", "Kalyan junction", "Thakurli", "Dombivli", "Kopar", "Diva Junction", "Mumbra", "Kalwa", "Thane", "Mulund", "Nahur", "Bhandup", "Ghatkopar"
   ];
 }
