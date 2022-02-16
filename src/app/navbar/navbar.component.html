@@ -2,35 +2,35 @@
   <div class="mx-auto d-flex flex-row justify-content-start h-100" style="max-width: 1280px; background-color: transparent;">
     <img src="../../assets/logo.png" class="py-md-3 py-2 px-2">
     <a class="nav-link disabled">|</a>
-    <a class="nav-link">How it works</a>
+    <a class="nav-link" (click)="navigateHome()">How it works</a>
     <a class="nav-link dropdown">Offerings
       <div class="dropdown-content mt-3">
         <div class="row mx-0 pt-3 px-1">
-          <div class="col-12 col-md-3 mb-3">
+          <div class="col-12 col-md-3 mb-3" (click)="navigateInterior('kitchen', 0)">
             <div style="height: 100px;">
               <img src="../../assets/kitchen/3.jpg" style="object-fit: cover;" height="100%" width="100%">
             </div>
             <p style="line-height: 36px;">Kitchen</p>
           </div>
-          <div class="col-12 col-md-3 mb-3">
+          <div class="col-12 col-md-3 mb-3" (click)="navigateInterior('bedroom', 0)">
             <div style="height: 100px;">
               <img src="../../assets/bedroom/11.jpg" style="object-fit: cover;" height="100%" width="100%">
             </div>
             <p style="line-height: 36px;">Bedroom</p>
           </div>
-          <div class="col-12 col-md-3 mb-3">
+          <div class="col-12 col-md-3 mb-3" (click)="navigateInterior('kidsroom', 1)">
             <div style="height: 100px;">
               <img src="../../assets/kids room/11.jpg" style="object-fit: cover;" height="100%" width="100%">
             </div>
             <p style="line-height: 36px;">Kids Room</p>
           </div>
-          <div class="col-12 col-md-3 mb-3">
+          <div class="col-12 col-md-3 mb-3" (click)="navigateInterior('livingroom', 1)">
             <div style="height: 100px;">
               <img src="../../assets/living room/4.jpg" style="object-fit: cover;" height="100%" width="100%">
             </div>
             <p style="line-height: 36px;">Living Room</p>
           </div>
-          <div class="col-12 col-md-3 mb-3">
+          <div class="col-12 col-md-3 mb-3" (click)="navigateInterior('washroom', 2)">
             <div style="height: 100px;">
               <img src="../../assets/washroom/4.jpg" style="object-fit: cover;" height="100%" width="100%">
             </div>
@@ -45,6 +45,6 @@
       </div>
     </a>
     <a class="nav-link">Locus Homes</a>
-    <a class="nav-link">More</a>
+    <a class="nav-link" routerLink="/about">More</a>
   </div>
 </div>

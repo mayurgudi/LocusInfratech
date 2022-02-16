@@ -1,17 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { AfterViewInit, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-interior',
   templateUrl: './interior.component.html',
   styleUrls: ['./interior.component.sass']
 })
-export class InteriorComponent implements OnInit {
+export class InteriorComponent implements OnInit, AfterViewInit {
 
-  constructor(private router : Router) {
+  constructor(private router : Router, private activeRoute: ActivatedRoute, private app: AppService, private cdr: ChangeDetectorRef) {
     this.page = 0;
-    window.scrollTo(0,0);
-    if(this.router.url == '/interior')
+  }
+
+  ngOnInit(): void {
+    if(this.router.url.startsWith('/interior'))
     {
       this.isInterior = true;
     }
@@ -20,8 +23,11 @@ export class InteriorComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-
+  ngAfterViewInit(): void {
+    this.page = this.app.page;
+    console.log(this.app.page + " " + this.app.section);
+    this.cdr.detectChanges();
+    this.scroll(this.app.section);
   }
 
   kitchen : String[] = ["../../assets/kitchen/1.jpg","../../assets/kitchen/2.jpg","../../assets/kitchen/3.jpg","../../assets/kitchen/4.jpg","../../assets/kitchen/5.jpg","../../assets/kitchen/6.jpg","../../assets/kitchen/7.jpg","../../assets/kitchen/8.jpg","../../assets/kitchen/9.jpg","../../assets/kitchen/10.jpg","../../assets/kitchen/11.jpg","../../assets/kitchen/12.jpg"];
@@ -33,14 +39,24 @@ export class InteriorComponent implements OnInit {
   wardrobe : String[] = ["../../assets/wardrobe/1.jpg","../../assets/wardrobe/2.jpg","../../assets/wardrobe/3.jpg","../../assets/wardrobe/4.jpg","../../assets/wardrobe/5.jpg","../../assets/wardrobe/6.jpg","../../assets/wardrobe/7.jpg","../../assets/wardrobe/8.jpg","../../assets/wardrobe/9.jpg","../../assets/wardrobe/10.jpg","../../assets/wardrobe/11.jpg","../../assets/wardrobe/12.jpg"];
   homes : String[] = ["../../assets/homes/1.jpeg","../../assets/homes/2.jpeg","../../assets/homes/3.jpeg","../../assets/homes/4.jpeg","../../assets/homes/5.jpeg","../../assets/homes/6.jpeg","../../assets/homes/7.jpeg","../../assets/homes/8.jpeg","../../assets/homes/9.jpeg","../../assets/homes/10.jpeg","../../assets/homes/11.jpeg","../../assets/homes/12.jpeg","../../assets/homes/13.jpeg","../../assets/homes/14.jpeg","../../assets/homes/15.jpeg","../../assets/homes/16.jpeg","../../assets/homes/17.jpeg","../../assets/homes/18.jpeg","../../assets/homes/19.jpeg","../../assets/homes/20.jpeg","../../assets/homes/21.jpeg"];
   page : number;
-  isInterior : boolean;
+  isInterior : boolean = true;
 
   back() {
     history.back();
   }
 
+  scroll(loc: string) {
+    console.log(loc);
+    let elem = document.getElementById(loc)?.offsetTop || 0;
+    window.scrollTo({
+      top: elem,
+      behavior: 'smooth'
+    })
+  }
+
   updatePage(i : number) {
     this.page = i;
+    this.cdr.detectChanges();
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

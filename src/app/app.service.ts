@@ -14,6 +14,9 @@ export class AppService {
 
   cpVal : number = 0;
   carPos: Subject<number> = new Subject<number>();
+  page: number = 0;
+  section: string = "kitchen";
+  howItWorks: boolean = false;
 
   updateVal(i : number) {
     this.carPos.next(i);

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
@@ -6,9 +6,24 @@ import { AppService } from '../app.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(private app : AppService) { }
+
+  ngAfterViewInit(): void {
+    if(this.app.howItWorks)
+    {
+      this.scroll('howitworks');
+    }
+  }
+
+  scroll(loc: string) {
+    let elem = document.getElementById(loc)?.offsetTop || 0;
+    window.scrollTo({
+      top: elem,
+      behavior: 'smooth'
+    })
+  }
 
   ngOnInit(): void {
 
