@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class InteriorComponent implements OnInit, AfterViewInit {
 
-  constructor(private router : Router, private activeRoute: ActivatedRoute, private app: AppService, private cdr: ChangeDetectorRef) {
+  constructor(private router : Router, private app: AppService, private cdr: ChangeDetectorRef) {
     this.page = 0;
   }
 
@@ -25,7 +25,6 @@ export class InteriorComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.page = this.app.page;
-    console.log(this.app.page + " " + this.app.section);
     this.cdr.detectChanges();
     this.scroll(this.app.section);
   }
@@ -46,7 +45,6 @@ export class InteriorComponent implements OnInit, AfterViewInit {
   }
 
   scroll(loc: string) {
-    console.log(loc);
     let elem = document.getElementById(loc)?.offsetTop || 0;
     window.scrollTo({
       top: elem,

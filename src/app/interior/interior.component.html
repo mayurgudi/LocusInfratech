@@ -15,9 +15,9 @@
     </div>
   </div>
   <div class="d-flex flex-row justify-content-center" *ngIf="isInterior">
-    <button class="round-gradient-btn m-3" (click)="updatePage(0)">1</button>
-    <button class="round-gradient-btn m-3" (click)="updatePage(1)">2</button>
-    <button class="round-gradient-btn m-3" (click)="updatePage(2)">3</button>
-    <button class="round-gradient-btn m-3" (click)="updatePage(3)">4</button>
+    <button class="m-3" [ngClass]="page==0?'selected-btn':'round-gradient-btn'" (click)="updatePage(0)">1</button>
+    <button class="m-3" [ngClass]="page==1?'selected-btn':'round-gradient-btn'" (click)="updatePage(1)">2</button>
+    <button class="m-3" [ngClass]="page==2?'selected-btn':'round-gradient-btn'" (click)="updatePage(2)">3</button>
+    <button class="m-3" [ngClass]="page==3?'selected-btn':'round-gradient-btn'" (click)="updatePage(3)">4</button>
   </div>
 </div>

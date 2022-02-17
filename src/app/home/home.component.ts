@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-
+    window.scrollTo(0,0);
   }
 
   banner = ["Family time and heavenly homes", "Space designed with love", "Comfort zone in every corner of your home"];
@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   images = ['../../assets/home page/1.jpg', '../../assets/home page/2.jpg', '../../assets/home page/3.jpg','../../assets/home page/4.jpg'];
 
   check(i: number) {
-    console.log("in carousel " + i);
     this.app.updateVal(i);
   }
 }

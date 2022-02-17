@@ -20,6 +20,5 @@ export class AppService {
 
   updateVal(i : number) {
     this.carPos.next(i);
-    console.log(this.cpVal)
   }
 }
