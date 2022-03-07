@@ -1,14 +1,20 @@
 @import "../../styles.sass"
 
+.navbar
+  background-color: #0F2028
+
 .nav-link
   padding-top: 8px
   padding-bottom: 8px
   padding-left: 16px
   padding-right: 16px
   height: 100%
-  line-height: 54px
+  line-height: 32px
   color: $theme-green
   cursor: pointer
+
+.cityItem
+  border-bottom: 1px solid $theme-green
 
 .dropdown
   position: relative
@@ -24,8 +30,45 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
   z-index: 1
 
-.dropdown:hover .dropdown-content
-  display: block
-
 p
   margin-bottom: 0
+
+@media ( min-width: 768px )
+
+  .navbar
+    padding-top: calc(max(1.2vw, 12px))
+    padding-bottom: calc(max(1.2vw, 12px))
+
+  .nav-link
+    line-height: 1.5
+    font-size: 1.4vw
+
+  .nav-image
+    height: 3vw
+    object-fit: contain
+
+  .dropdown:hover .dropdown-content
+    display: block
+
+@media (max-width: 767.5px)
+  .navbar
+    height: auto
+    width: 100%
+
+  .nav-link
+    line-height: 1.25
+    font-size: 18px
+
+  .nav-image
+    height: 48px
+    aspect-ratio: 3.069
+    object-fit: cover
+
+  .dropdown-content
+    width: 100%
+    height: auto
+    position: static
+
+  .dropdown:hover .dropdown-content
+    display: block
+

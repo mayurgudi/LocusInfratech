@@ -1,6 +1,6 @@
 <div class="w-100" style="background-color: #172128;">
   <div class="mx-auto" style="width: 100vw; max-width: 100%;">
-    <div id="slideshow" class="carousel slide" style="height: calc(100vh - 70px)" data-bs-ride="carousel">
+    <div #carousel id="slideshow" class="carousel slide" style="height: calc(100vh - 64px)" data-bs-interval="1000" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <ng-container *ngFor="let item of images; let i = index">
           <button (click)="check(i)" [ngClass]="i==0 ? 'active' : '' " data-bs-target="#slideshow" [attr.data-bs-slide-to]="i" [attr.aria-label]="'Slide'+i"></button>

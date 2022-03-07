@@ -1,9 +1,9 @@
 <div class="d-flex flex-row w-100 justify-content-center" id="howitworks">
   <div class="flex-fill my-auto top-sep-green"></div>
-  <p class="text-center my-auto mx-3 green-color" style="font-size: 36px;">It's easier than you think</p>
+  <p class="text-center my-auto mx-3 green-color" style="font-size: 2.5vw;">It's easier than you think</p>
   <div class="flex-fill my-auto top-sep-green"></div>
 </div>
-<div class="my-5 d-flex flex-row justify-content-between">
+<div class="my-5 h-100 d-flex flex-row justify-content-center mx-auto">
   <div class="d-flex flex-column ms-5 me-2">
     <ng-container *ngFor="let item of arr; let i = index">
       <div class="d-flex justify-content-center align-items-center" style="border-radius: 100%; height: 40px; width: 40px; z-index: 1;" [ngClass]="[ i==0 ? '' : 'negative-margin', percentArray[i] ? 'active-bg' : 'inactive-bg' ]" >
@@ -20,7 +20,7 @@
       <div *ngIf="i!=arr.length-1" class="dotted-border" style="visibility: hidden"></div>
     </ng-container>
   </div>
-  <div class="flex-fill me-4">
+  <div class="me-4" style="height: 600px;">
     <div id="second" class="carousel slide h-100" data-bs-ride="">
       <button class="position-absolute green-bg" style="border: none; margin-left: -25px; top: calc(50% - 25px); border-radius: 50%; height: 50px; width: 50px; z-index: 50;" (click)="decrement()">
         <i class="fas fa-chevron-left" style="font-size: 30px; color: white; font-weight: lighter; margin-left: -5px;"></i>
@@ -28,7 +28,7 @@
       <div class="carousel-inner h-100">
         <ng-container *ngFor="let item of images; let i = index">
           <div class="carousel-item h-100" [ngClass]="i==activeSlide ? 'active' : '' ">
-            <img [src]="item" style="object-fit: fill;" class="d-block w-100 h-100" alt="...">
+            <img [src]="item" style="object-fit: cover; object-position: center; aspect-ratio: 1.3654;" class="d-block w-100 h-100" alt="...">
           </div>
         </ng-container>
       </div>
@@ -37,7 +37,7 @@
       </button>
     </div>
   </div>
-  <div class="d-flex flex-row mx-0">
+  <div class="d-flex flex-row me-5">
     <div class="d-flex flex-column ms-4">
       <ng-container *ngFor="let item of percent; let i = index">
         <div class="d-flex justify-content-center" style="border-radius: 100%; height: 40px; width: 40px; z-index: 1;">

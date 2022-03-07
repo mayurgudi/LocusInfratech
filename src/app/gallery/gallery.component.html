@@ -7,8 +7,8 @@
   <ng-container *ngFor="let i of items">
     <div class="col-md-4 p-4">
       <div class="w-100" style="aspect-ratio: 1; z-index: 1;">
-        <a [href]="i" target="_blank">
-          <img [src]="i" height="100%" width="100%" style="object-fit: cover;">
+        <a class="imageLink" [href]="i" target="_blank">
+          <img [src]="i" height="100%" width="100%" style="object-fit: cover; border-radius: 10px; opacity: 0.6;">
         </a>
       </div>
     </div>

@@ -1,14 +1,22 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from '../app.service';
+declare var $: any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, AfterContentInit {
 
-  constructor(private app : AppService) { }
+  @ViewChild('carousel', { static: false }) private _carousel!: ElementRef;
+
+  ngAfterContentInit() {
+    this.router.navigateByUrl("/");
+  }
+
+  constructor(private app : AppService, private router: Router) { }
 
   ngAfterViewInit(): void {
     if(this.app.howItWorks)
