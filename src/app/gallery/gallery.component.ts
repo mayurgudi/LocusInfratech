@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -7,7 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  constructor({ nativeElement }: ElementRef<HTMLImageElement>) {
+    const supports = 'loading' in HTMLImageElement.prototype;
+    if (supports) {
+      nativeElement.setAttribute('loading', 'lazy');
+    }
+  }
 
   ngOnInit(): void {
   }

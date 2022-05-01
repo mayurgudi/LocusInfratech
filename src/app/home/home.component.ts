@@ -8,15 +8,9 @@ declare var $: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
-export class HomeComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('carousel', { static: false }) private _carousel!: ElementRef;
-
-  ngAfterContentInit() {
-    this.router.navigateByUrl("/");
-  }
-
-  constructor(private app : AppService, private router: Router) { }
+  constructor(private app : AppService) { }
 
   ngAfterViewInit(): void {
     if(this.app.howItWorks)
@@ -35,6 +29,9 @@ export class HomeComponent implements OnInit, AfterViewInit, AfterContentInit {
 
   ngOnInit(): void {
     window.scrollTo(0,0);
+    $(document).ready(function() {
+      $('#slideshow').carousel();
+    })
   }
 
   banner = ["Family time and heavenly homes", "Space designed with love", "Comfort zone in every corner of your home"];

@@ -5,3 +5,22 @@
   background: url('../../../assets/sample.webp')
   background-color: darken($theme-blue, 6%)
   background-blend-mode: multiply
+  background-repeat: no-repeat
+  background-size: cover
+
+.border-right
+  border-right: 2px solid white
+
+.title
+  font-size: 2.25vw
+  color: white
+
+@media (max-width: 991.5px)
+  .main-div
+    border-top-right-radius: 20px
+
+  .border-right
+    border: none
+
+  .title
+    font-size: 28px

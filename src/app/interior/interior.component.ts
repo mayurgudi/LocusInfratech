@@ -1,5 +1,5 @@
-import { AfterViewInit, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({
@@ -31,7 +31,7 @@ export class InteriorComponent implements OnInit, AfterViewInit {
 
   kitchen : String[] = ["../../assets/kitchen/1.jpg","../../assets/kitchen/2.jpg","../../assets/kitchen/3.jpg","../../assets/kitchen/4.jpg","../../assets/kitchen/5.jpg","../../assets/kitchen/6.jpg","../../assets/kitchen/7.jpg","../../assets/kitchen/8.jpg","../../assets/kitchen/9.jpg","../../assets/kitchen/10.jpg","../../assets/kitchen/11.jpg","../../assets/kitchen/12.jpg"];
   bedroom : String[] = ["../../assets/bedroom/1.jpg","../../assets/bedroom/2.jpg","../../assets/bedroom/3.jpg","../../assets/bedroom/4.jpg","../../assets/bedroom/5.jpg","../../assets/bedroom/6.jpg","../../assets/bedroom/7.jpg","../../assets/bedroom/8.jpg","../../assets/bedroom/9.jpg","../../assets/bedroom/10.jpg","../../assets/bedroom/11.jpg","../../assets/bedroom/12.jpg"];
-  livingroom : String[] = ["../../assets/living room/1.jpg","../../assets/living room/2.jpg","../../assets/living room/3.jpg","../../assets/living room/4.jpg","../../assets/living room/5.jpg","../../assets/living room/6.jpg","../../assets/living room/7.jpg"];
+  livingroom : String[] = ["../../assets/living room/1.jpg","../../assets/living room/2.jpg","../../assets/living room/3.jpg","../../assets/living room/4.jpg","../../assets/living room/5.jpg","../../assets/living room/6.jpg","../../assets/living room/8.jpg","../../assets/living room/9.jpg","../../assets/living room/10.jpg","../../assets/living room/11.jpg","../../assets/living room/12.jpg","../../assets/living room/13.jpg","../../assets/living room/14.jpg","../../assets/living room/15.jpg","../../assets/living room/16.jpg","../../assets/living room/17.jpg","../../assets/living room/18.jpg","../../assets/living room/19.jpg","../../assets/living room/20.jpg","../../assets/living room/21.jpg","../../assets/living room/22.jpg"];
   kidsroom : String[] = ["../../assets/kids room/1.jpg","../../assets/kids room/2.jpg","../../assets/kids room/3.jpg","../../assets/kids room/4.jpg","../../assets/kids room/5.jpg","../../assets/kids room/6.jpg","../../assets/kids room/7.jpg","../../assets/kids room/8.jpg","../../assets/kids room/9.jpg","../../assets/kids room/10.jpg","../../assets/kids room/11.jpg","../../assets/kids room/12.jpg"];
   washroom : String[] = ["../../assets/washroom/1.jpg","../../assets/washroom/2.jpg","../../assets/washroom/3.jpg","../../assets/washroom/4.jpg"];
   epoxy : String[] = ["../../assets/epoxy flooring/1.jpg","../../assets/epoxy flooring/2.png","../../assets/epoxy flooring/3.jpg","../../assets/epoxy flooring/4.png","../../assets/epoxy flooring/5.png","../../assets/epoxy flooring/6.png","../../assets/epoxy flooring/7.png","../../assets/epoxy flooring/9.jpg","../../assets/epoxy flooring/10.jpg","../../assets/epoxy flooring/11.jpg","../../assets/epoxy flooring/12.jpg"];

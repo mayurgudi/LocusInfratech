@@ -3,8 +3,8 @@
     <img src="../../assets/logo/logo-banner.png" routerLink="/home" routerLinkActive="router-link-active"  class="my-md-auto my-0 mx-2 nav-image">
     <a class="nav-link disabled d-none d-md-block">|</a>
     <a class="nav-link" (click)="navigateHome()">How it works</a>
-    <a class="nav-link dropdown" data-toggle="dropdown">Offerings
-      <div class="dropdown-content mt-n1">
+    <a class="nav-link dropdown" id="offerings" data-toggle="dropdown">Offerings
+      <div class="dropdown-content">
         <div class="row mx-0 pt-3 px-md-1 px-0 w-100">
           <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('kitchen', 0)">
             <div style="height: 100px;">
@@ -52,7 +52,7 @@
       </div>
     </a>
     <a class="nav-link dropdown">Locality
-      <div class="dropdown-content mt-n1" style="width: fit-content; line-height: 36px;">
+      <div class="dropdown-content" style="width: fit-content; line-height: 36px;">
         <ng-container *ngFor="let item of cities">
           <p class="mx-2 mb-0 cityItem">{{ item }}</p>
         </ng-container>

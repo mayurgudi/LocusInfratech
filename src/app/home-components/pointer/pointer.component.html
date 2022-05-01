@@ -1,9 +1,10 @@
 <div class="d-flex flex-row w-100 justify-content-center" id="howitworks">
   <div class="flex-fill my-auto top-sep-green"></div>
-  <p class="text-center my-auto mx-3 green-color" style="font-size: 2.5vw;">It's easier than you think</p>
+  <p class="text-center my-auto mx-3 green-color title">It's easier than you think</p>
   <div class="flex-fill my-auto top-sep-green"></div>
 </div>
-<div class="my-5 h-100 d-flex flex-row justify-content-center mx-auto">
+<!-- desktop view -->
+<div class="my-5 h-100 d-none d-xl-flex flex-row justify-content-center mx-auto">
   <div class="d-flex flex-column ms-5 me-2">
     <ng-container *ngFor="let item of arr; let i = index">
       <div class="d-flex justify-content-center align-items-center" style="border-radius: 100%; height: 40px; width: 40px; z-index: 1;" [ngClass]="[ i==0 ? '' : 'negative-margin', percentArray[i] ? 'active-bg' : 'inactive-bg' ]" >
@@ -54,5 +55,48 @@
         </ng-container>
       </ng-container>
     </div>
+  </div>
+</div>
+<!-- mobile view -->
+<div class="my-5 d-flex d-xl-none flex-column justify-content-start mx-auto">
+  <div id="second" class="carousel slide h-100 mx-auto" style="width: 80%;" data-bs-ride="">
+    <button class="position-absolute green-bg p-0 d-flex align-items-center justify-content-center" style="border: none; margin-left: -15px; top: calc(50% - 15px); border-radius: 50%; height: 30px; width: 30px; z-index: 50;" (click)="decrement()">
+      <i class="fas fa-chevron-left" style="font-size: 15px; color: white; font-weight: lighter;"></i>
+    </button>
+    <div class="carousel-inner h-100">
+      <ng-container *ngFor="let item of images; let i = index">
+        <div class="carousel-item h-100" [ngClass]="i==activeSlide ? 'active' : '' ">
+          <img [src]="item" style="object-fit: cover; object-position: center; aspect-ratio: 1.3654;" class="d-block w-100 h-100" alt="...">
+        </div>
+      </ng-container>
+    </div>
+    <button class="position-absolute green-bg p-0 d-flex align-items-center justify-content-center" style="border: none; margin-left: -15px; top: calc(50% - 15px); left: 100%; border-radius: 50%; height: 30px; width: 30px; z-index: 50;" (click)="increment()">
+      <i class="fas fa-chevron-right" style="font-size: 15px; color: white; font-weight: lighter;"></i>
+    </button>
+  </div>
+  <div class="my-3 d-flex flex-row justify-content-center">
+    <div class="d-flex justify-content-center align-items-center active-bg me-3" style="border-radius: 100%; height: 40px; width: 40px; z-index: 1;">
+      <p class="my-auto" style="color: white; line-height: 20px;">{{ activeSlide + 1 }}</p>
+    </div>
+    <div class="d-flex justify-content-start" style="height: 40px; z-index: 1;">
+      <p class="my-auto text-left" style="color: white; line-height: 20px; white-space: nowrap;">{{ arr[activeSlide] }}</p>
+    </div>
+  </div>
+  <div class="d-flex flex-row justify-content-between mx-4 my-3">
+    <ng-container *ngFor="let item of percent, let i=index">
+      <div class="d-flex flex-row justify-content-start align-items-center" [ngClass]="item == 100 ? '' : 'w-100'">
+        <div class="d-flex justify-content-center align-items-center" style="border: 8px solid #193f5f; border-radius: 100%; height: 30px; aspect-ratio: 1; background-color: white; position: relative; z-index: 3;" [ngStyle]="{'border-color': i <= activeSlide ? '#6290b2' : '#193f5f' }">
+        </div>
+        <div class="flex-fill" *ngIf="item != 100" style="position: relative; z-index: 2; height: 14px; width: calc(100% + 30px); background-color: white; margin-left: -15px; margin-right: -15px;" [ngStyle]="{'background-color': i < activeSlide ? '#6290b2' : '#193f5f' }">
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="d-flex flex-row justify-content-between mx-4">
+    <ng-container *ngFor="let item of percent">
+      <div class="d-flex justify-content-center align-items-center" style="height: 30px; aspect-ratio: 1;">
+        <p class="my-auto" style="line-height: 15px; font-size: 12px; color: white;">{{ item }}%</p>
+      </div>
+    </ng-container>
   </div>
 </div>
