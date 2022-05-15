@@ -14,6 +14,7 @@ import { PointerComponent } from './home-components/pointer/pointer.component';
 import { ReviewComponent } from './home-components/review/review.component';
 import { AboutComponent } from './about/about.component';
 import { InteriorComponent } from './interior/interior.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { InteriorComponent } from './interior/interior.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

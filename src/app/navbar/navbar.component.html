@@ -1,64 +1,110 @@
 <div class="navbar">
-  <div class="mx-0 mx-md-3 d-flex flex-column flex-md-row justify-content-start h-100" style="background-color: transparent;">
-    <img src="../../assets/logo/logo-banner.png" routerLink="/home" routerLinkActive="router-link-active"  class="my-md-auto my-0 mx-2 nav-image">
-    <a class="nav-link disabled d-none d-md-block">|</a>
-    <a class="nav-link" (click)="navigateHome()">How it works</a>
-    <a class="nav-link dropdown" id="offerings" data-toggle="dropdown">Offerings
-      <div class="dropdown-content">
-        <div class="row mx-0 pt-3 px-md-1 px-0 w-100">
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('kitchen', 0)">
-            <div style="height: 100px;">
-              <img src="../../assets/kitchen/3.jpg" style="object-fit: cover;" height="100%" width="100%">
+  <div class="mx-0 mx-md-3 d-flex flex-column flex-md-row justify-content-start h-100 w-100" style="background-color: transparent;">
+    <img src="../../assets/logo/logo-banner.png" routerLink="/home" routerLinkActive="router-link-active" class="my-md-auto my-0 mx-md-2 ms-2 me-0 nav-image">
+    <div class="d-flex flex-row justify-content-start mx-1">
+      <a class="nav-link disabled d-none d-md-block">|</a>
+      <a class="nav-link" (click)="navigateHome()">How it works</a>
+      <a class="nav-link dropdown" id="offerings" data-toggle="dropdown">Offerings
+        <div class="dropdown-content">
+          <div class="row mx-0 pt-3 px-md-1 px-0 w-100 d-none d-md-block">
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('kitchen', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/kitchen/3.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Kitchen</p>
             </div>
-            <p style="line-height: 36px;">Kitchen</p>
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('bedroom', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/bedroom/11.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Bedroom</p>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('kidsroom', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/kids room/11.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Kids Room</p>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('livingroom', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/living room/3.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Living Room</p>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('washroom', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/washroom/4.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Washroom</p>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('epoxy', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/epoxy flooring/9.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Epoxy Flooring</p>
+            </div>
+            <div class="col-sm-6 col-md-3 mb-3" (click)="navigateInterior('wardrobe', 0)">
+              <div style="height: 100px;">
+                <img src="../../assets/wardrobe/9.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Wardrobe</p>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('bedroom', 0)">
-            <div style="height: 100px;">
-              <img src="../../assets/bedroom/11.jpg" style="object-fit: cover;" height="100%" width="100%">
+          <div class="row mx-0 pt-3 px-md-1 px-0 w-100 d-block d-md-none">
+            <div class="col-12 mb-3" (click)="navigateInterior('kitchen', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/kitchen/3.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Kitchen</p>
             </div>
-            <p style="line-height: 36px;">Bedroom</p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('kidsroom', 1)">
-            <div style="height: 100px;">
-              <img src="../../assets/kids room/11.jpg" style="object-fit: cover;" height="100%" width="100%">
+            <div class="col-12 mb-3" (click)="navigateInterior('bedroom', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/bedroom/11.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Bedroom</p>
             </div>
-            <p style="line-height: 36px;">Kids Room</p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('livingroom', 1)">
-            <div style="height: 100px;">
-              <img src="../../assets/living room/3.jpg" style="object-fit: cover;" height="100%" width="100%">
+            <div class="col-12 mb-3" (click)="navigateInterior('kidsroom', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/kids room/11.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Kids Room</p>
             </div>
-            <p style="line-height: 36px;">Living Room</p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('washroom', 2)">
-            <div style="height: 100px;">
-              <img src="../../assets/washroom/4.jpg" style="object-fit: cover;" height="100%" width="100%">
+            <div class="col-12 mb-3" (click)="navigateInterior('livingroom', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/living room/3.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Living Room</p>
             </div>
-            <p style="line-height: 36px;">Washroom</p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('epoxy', 2)">
-            <div style="height: 100px;">
-              <img src="../../assets/epoxy flooring/9.jpg" style="object-fit: cover;" height="100%" width="100%">
+            <div class="col-12 mb-3" (click)="navigateInterior('washroom', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/washroom/4.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Washroom</p>
             </div>
-            <p style="line-height: 36px;">Epoxy Flooring</p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-3" (click)="navigateInterior('wardrobe', 3)">
-            <div style="height: 100px;">
-              <img src="../../assets/wardrobe/9.jpg" style="object-fit: cover;" height="100%" width="100%">
+            <div class="col-12 mb-3" (click)="navigateInterior('epoxy', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/epoxy flooring/9.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Epoxy Flooring</p>
             </div>
-            <p style="line-height: 36px;">Wardrobe</p>
+            <div class="col-12 mb-3" (click)="navigateInterior('wardrobe', 1)">
+              <div style="height: 100px;">
+                <img src="../../assets/wardrobe/9.jpg" style="object-fit: cover;" height="100%" width="100%">
+              </div>
+              <p style="line-height: 36px;">Wardrobe</p>
+            </div>
           </div>
         </div>
-      </div>
-    </a>
-    <a class="nav-link dropdown">Locality
-      <div class="dropdown-content" style="width: fit-content; line-height: 36px;">
-        <ng-container *ngFor="let item of cities">
-          <p class="mx-2 mb-0 cityItem">{{ item }}</p>
-        </ng-container>
-      </div>
-    </a>
-    <a class="nav-link" routerLink="/homes">Locus Homes</a>
-    <a class="nav-link" routerLink="/about">More</a>
+      </a>
+      <a class="nav-link dropdown">Locality
+        <div class="dropdown-content" style="width: fit-content; line-height: 36px;">
+          <ng-container *ngFor="let item of cities">
+            <p class="mx-2 mb-0 cityItem">{{ item }}</p>
+          </ng-container>
+        </div>
+      </a>
+      <a class="nav-link" routerLink="/homes">Locus Homes</a>
+      <a class="nav-link" routerLink="/about">More</a>
+    </div>
   </div>
 </div>

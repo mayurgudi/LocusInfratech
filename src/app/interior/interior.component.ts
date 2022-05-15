@@ -14,6 +14,7 @@ export class InteriorComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    console.log(this.router.url);
     if(this.router.url.startsWith('/interior'))
     {
       this.isInterior = true;
@@ -24,9 +25,12 @@ export class InteriorComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.page = this.app.page;
-    this.cdr.detectChanges();
-    this.scroll(this.app.section);
+    if(this.isInterior)
+    {
+      this.page = this.app.page;
+      this.cdr.detectChanges();
+      this.scroll(this.app.section);
+    }
   }
 
   kitchen : String[] = ["../../assets/kitchen/1.jpg","../../assets/kitchen/2.jpg","../../assets/kitchen/3.jpg","../../assets/kitchen/4.jpg","../../assets/kitchen/5.jpg","../../assets/kitchen/6.jpg","../../assets/kitchen/7.jpg","../../assets/kitchen/8.jpg","../../assets/kitchen/9.jpg","../../assets/kitchen/10.jpg","../../assets/kitchen/11.jpg","../../assets/kitchen/12.jpg"];
