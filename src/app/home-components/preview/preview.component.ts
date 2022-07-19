@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-preview',
@@ -9,7 +10,30 @@ export class PreviewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  images : string[] = ["../../../assets/homes/1.jpeg", "../../../assets/homes/13.jpeg", "../../../assets/homes/5.jpeg"];
 
+  ngOnInit(): void {
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        loop: false,
+        autoplay: false,
+        center: true,
+        dots: false,
+        startPosition: "1",
+        responsive: {
+          0: {
+            items: 2,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+      // window.location.href = "2";
+    }) 
+  }
 }

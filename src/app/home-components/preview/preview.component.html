@@ -22,15 +22,14 @@
   <p class="text-center title my-auto mx-3 green-color">A little preview of our homes</p>
   <div class="flex-fill my-auto top-sep-green"></div>
 </div>
-<div class="row w-100 mx-auto justify-content-between px-4 pt-4 pb-2">
-  <div class="col-12 col-sm-4 my-4" style="aspect-ratio: 1;">
-    <img src="../../../assets/homes/1.jpeg" style="object-fit: cover; object-position: center; height: 100%; width: 100%; border-radius: 10px;">
+<div class="owl-carousel d-md-none pt-4 pb-2">
+  <div class="w-100 mx-auto p-2" *ngFor="let i of images">
+    <img [src]="i" style="object-fit: cover; object-position: center; aspect-ratio: 1; width: 100%; border-radius: 10px;">
   </div>
-  <div class="col-12 col-sm-4 my-4" style="aspect-ratio: 1;">
-    <img src="../../../assets/homes/13.jpeg" style="object-fit: cover; object-position: center; height: 100%; width: 100%; border-radius: 10px;">
-  </div>
-  <div class="col-12 col-sm-4 my-4" style="aspect-ratio: 1;">
-    <img src="../../../assets/homes/5.jpeg" style="object-fit: cover; object-position: center; height: 100%; width: 100%; border-radius: 10px;">
+</div>
+<div class="d-none d-md-flex w-100 flex-row justify-content-start mx-0 pt-4 pb-2 px-3">
+  <div class="w-100 px-3" style="aspect-ratio: 1;" *ngFor="let i of images">
+    <img [src]="i" style="object-fit: cover; object-position: center; aspect-ratio: 1; width: 100%; border-radius: 10px;">
   </div>
 </div>
 <div class="mb-5 d-flex justify-content-center">

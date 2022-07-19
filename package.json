@@ -20,6 +20,9 @@
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
     "jquery": "^3.6.0",
+    "ngx-owl-carousel": "^2.0.7",
+    "ngx-owl-carousel-o": "^14.0.0",
+    "owl.carousel": "^2.3.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
