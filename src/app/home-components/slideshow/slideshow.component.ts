@@ -33,7 +33,6 @@ export class SlideshowComponent implements OnInit {
           },
         },
       });
-      // window.location.href = "2";
     }) 
   }
 

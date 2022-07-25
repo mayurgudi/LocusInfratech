@@ -33,7 +33,6 @@ export class PreviewComponent implements OnInit {
           },
         },
       });
-      // window.location.href = "2";
     }) 
   }
 }
