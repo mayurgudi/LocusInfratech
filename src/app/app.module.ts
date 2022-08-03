@@ -15,7 +15,6 @@ import { ReviewComponent } from './home-components/review/review.component';
 import { AboutComponent } from './about/about.component';
 import { InteriorComponent } from './interior/interior.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   declarations: [
@@ -35,8 +34,7 @@ import { OwlModule } from 'ngx-owl-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    OwlModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
