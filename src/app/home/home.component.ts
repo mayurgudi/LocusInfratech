@@ -31,16 +31,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     window.scrollTo(0,0);
     $(document).ready(function() {
       $('#slideshow').carousel();
-      var owl = $('.owl-carousel');
-      owl.owlCarousel({
-        loop: true,
-        autoplay: 3000,
-        autoplaySpeed: 1500,
-        center: true,
-        dots: true,
-        items: 1,
+      // var owl = $('#home-carousel');
+      // owl.owlCarousel({
+      //   loop: true,
+      //   autoplay: 3000,
+      //   autoplaySpeed: 1500,
+      //   center: true,
+      //   dots: true,
+      //   items: 1,
 
-      });
+      // });
     })
   }
 

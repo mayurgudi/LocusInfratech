@@ -14,7 +14,7 @@ export class PreviewComponent implements OnInit {
 
   ngOnInit(): void {
     $(document).ready(function() {
-      var owl = $('.owl-carousel');
+      var owl = $('#preview');
       owl.owlCarousel({
         loop: false,
         autoplay: false,

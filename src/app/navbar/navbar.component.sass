@@ -13,7 +13,7 @@
   color: $theme-green
   cursor: pointer
 
-.cityItem
+.cityItem:not(:last-child)
   border-bottom: 1px solid $theme-green
 
 .dropdown
@@ -40,15 +40,18 @@ p
 @media (min-width: 768px)
 
   .navbar
-    padding-top: calc(max(1.2vw, 12px))
-    padding-bottom: calc(max(1.2vw, 12px))
+    height: fit-content
+    min-height: fit-content
+    padding-top: 12px
+    padding-bottom: 12px
 
   .nav-link
     line-height: 1.5
-    font-size: 1.4vw
+    font-size: 18px
+    min-height: fit-content
 
   .nav-image
-    height: 3vw
+    height: 43px
     object-fit: contain
 
   .dropdown:hover .dropdown-content

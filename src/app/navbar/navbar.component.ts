@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-``
+
   }
 
   scroll(loc: string) {

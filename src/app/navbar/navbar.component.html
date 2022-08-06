@@ -1,10 +1,10 @@
 <div class="navbar">
   <div class="mx-0 mx-md-3 d-flex flex-column flex-md-row justify-content-start h-100 w-100" style="background-color: transparent;">
     <img src="../../assets/logo/logo-banner.png" routerLink="/home" routerLinkActive="router-link-active" class="my-md-auto my-0 mx-md-2 ms-2 me-0 nav-image">
-    <div class="d-flex flex-row justify-content-start mx-1">
+    <div class="d-flex flex-row justify-content-md-start mx-md-1 justify-content-center mx-auto" style="min-height: fit-content;">
       <a class="nav-link disabled d-none d-md-block">|</a>
       <a class="nav-link" (click)="navigateHome()">How it works</a>
-      <a class="nav-link dropdown" id="offerings" data-toggle="dropdown">Offerings
+      <a class="nav-link dropdown d-none d-md-block" id="offerings" data-toggle="dropdown">Offerings
         <div class="dropdown-content">
           <div class="mx-0 pt-3 px-md-1 px-0 row d-none d-md-flex flex-wrap" style="width: fit-content;">
             <div class="col-md-3 p-3 mb-3" (click)="navigateInterior('kitchen', 0)">
@@ -50,7 +50,7 @@
               <p style="line-height: 30px;">Wardrobe</p>
             </div>
           </div>
-          <div class="mx-0 pt-3 px-md-1 px-0 d-flex flex-column d-md-none" style="width: fit-content;">
+          <div class="mx-0 pt-3 px-md-1 px-0 d-flex flex-column d-none" style="width: fit-content;">
             <div class="m-2" style="width: auto;" (click)="navigateInterior('kitchen', 1)">
               <div style="height: 50px;">
                 <img src="../../assets/kitchen/3.jpg" style="object-fit: contain;" height="100%" width="auto">
@@ -96,11 +96,10 @@
           </div>
         </div>
       </a>
+      <a class="nav-link dropdown d-md-none" (click)="navigateInterior('kitchen', 1)">Offerings</a>
       <a class="nav-link dropdown">Locality
         <div class="dropdown-content" style="width: fit-content; line-height: 36px;">
-          <ng-container *ngFor="let item of cities">
-            <p class="mx-2 mb-0 cityItem">{{ item }}</p>
-          </ng-container>
+          <p *ngFor="let item of cities" class="mx-2 mb-0 cityItem">{{ item }}</p>
         </div>
       </a>
       <a class="nav-link" routerLink="/homes">Locus Homes</a>
