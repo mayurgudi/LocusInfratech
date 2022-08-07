@@ -7,17 +7,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InteriorComponent } from './interior/interior.component';
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
   { path: "consult", component: FormComponent },
   { path: "about", component: AboutComponent },
   { path: "interior", component: InteriorComponent },
   { path: "homes", component: InteriorComponent },
-  { path: "**", redirectTo: "home" },
+  { path: "home", component: HomeComponent },
+  { path: "**", component: HomeComponent },
   { path: "", component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'disabled', onSameUrlNavigation: 'reload' }), ReactiveFormsModule],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'disabled' }), ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
